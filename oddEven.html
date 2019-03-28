@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<title>Odd Even Number</title>
+
+<script>
+function odd_even(){
+	var a;
+	a = Number(document.getElementById("val").value);
+	 if ( a % 2 == 0 ){
+			alert("Even Number");
+		}
+	else if (a == Math.round(a)) {
+        alert("odd Number");
+		}
+	else {
+			alert("Please add number");
+		}
+	}
+</script>
+</head>
+<body>
+	Enter Any Number:<input id="val">
+	<button onclick="odd_even()">Click me</button>
+</body>
+</html>

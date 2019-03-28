@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html  lang="en-US">
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<title>
+			Test Site > Home
+		</title>
+		<script>
+		function xyz(){
+			var a = parseInt(document.getElementById("fn").value);
+			var b = parseInt(document.getElementById("sn").value);
+			
+			var c = a + b;
+			document.getElementById("demo").innerHTML = c;
+				//console.log(c);
+			}
+			
+		function Calc(){
+			var a = document.getElementById("val1").value;
+			var b = document.getElementById("val2").value;
+			var c = document.getElementById("opt").value;
+			
+			var z = eval(a + c + b);
+			document.getElementById("ans").innerHTML = z;
+		}
+	
+		</script>
+	</head>
+<body>
+
+	<input type="text" id="val1" value="">
+	<input type="text" id="opt" value="">
+	<input type="text" id="val2" value="">
+	
+	<input type="button" value="submit" onclick="Calc()">
+	<p >Answer: <strong id="ans"></strong></p>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="../images/fav.png" type="image/x-icon">
+
+
+
+			<!-- Bootstrap CSS -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+			<!-- GSAP -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+			<!-- ScrollMagic -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.js"></script>
+
+			<!--GSAP animation plugin should be placed after ScrollMagic! -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+    <style>
+
+			body, html{
+			height:200%;
+			overflow: hidden;
+			margin:0px;
+			padding:0px;
+			}
+
+
+
+
+			@font-face {
+			font-family: 'Gotham';
+			src: url('../fonts/Gotham-Light.woff2') format('woff2'),
+			url('../fonts/Gotham-Light.woff') format('woff');
+			font-weight: 300;
+			font-style: normal;
+			}
+
+			@font-face {
+			font-family: 'Gotham';
+			src: url('../fonts/Gotham-Black.woff2') format('woff2'),
+			url('../fonts/Gotham-Black.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+			}
+
+
+
+			#one, #two, #three, #four
+			{
+			padding: 0px;
+			margin: 0px;
+			height:100%;
+			position:absolute;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			font-size:3rem;
+			right: 0px;
+			left: 0px;
+			background-color:black!important;
+
+			}
+
+
+
+
+
+			#one {
+			top:0px;
+
+			}
+			#two {
+			top:100%;
+
+			}
+			#three {
+			top:200%;
+
+			}
+			#four {
+			top:300%;
+
+			}
+
+
+			.container-outer{
+			overflow: hidden;
+			margin:0px;
+			padding:0px;
+			width:100%;
+			height:100%;
+			position:relative;
+			}
+
+			.container-inner{
+
+			overflow:auto;
+			position:fixed;
+			width:100%;
+			height:100%;
+			padding:30px;
+			border:30px solid #131313;
+			margin:0px;
+			padding:0px;
+			}
+
+
+			.container-inner::-webkit-scrollbar {
+			display: none;
+			}
+
+
+			/*===============================================================================================================*/
+
+			/* SERVICES */
+
+
+
+			.service-title-first, .service-title-second, .service-title-third, .service-title-fourth{
+			color:#969696;
+			margin:0px!important;
+			}
+
+			.service-title-first::before, .service-title-second::before, .service-title-third::before, .service-title-fourth::before {
+			font-family: "Franklin Gothic Medium"!important;
+			left: 0;
+			font-size: 10rem;
+			width: 100%;
+			right: 0;
+			color: #1b1b1b;
+			margin: auto;
+			position: absolute;
+			transform: translateY(-55%);
+			}
+
+
+			.service-title-first::before{
+			content: "01";
+			}
+
+			.service-title-second::before{
+			content: "02";
+			}
+
+
+			.service-title-third::before{
+			content: "03";
+			}
+
+			.service-title-fourth::before{
+			content: "04";
+			}
+
+
+
+			.service-title-first::after, .service-title-second::after, .service-title-third::after, .service-title-fourth::after {
+			position: absolute;
+			font-family: "Gotham"!important;
+			width: 100%;
+			right: 0;
+			font-weight: 500;
+			color: #969696;
+			margin: auto;
+			z-index: 3!important;
+			top: -30%;
+			font-size: 2.1rem;
+			letter-spacing: 2px;
+			}
+
+			.service-title-first::after{
+			content: "PLANNING & STRATEGY";
+			}
+
+			.service-title-second::after{
+			content: "USER EXPERIENCE";
+			}
+
+
+			.service-title-third::after{
+			content: "DEVELOPMENT";
+			}
+
+			.service-title-fourth::after{
+			content: " QUALITY ASSURANCE";
+			}
+
+
+
+
+			.service-para-first, .service-para-second, .service-para-third, .service-para-fourth{
+			width: 460px;
+			margin-bottom: 0px!important;
+			font-size: 1.1rem;
+			color: #333333;
+			font-family: "Gotham"!important;
+			font-weight: 500;
+			right: 0;
+			margin: auto;
+			transform: translateY(80%);
+			top: 80%;
+			}
+
+
+
+			.service-first, .service-second, .service-third, .service-fourth{
+
+			display: -webkit-box;
+
+			display: -ms-flexbox;
+
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			text-align: -webkit-center;
+			-webkit-box-align:center;
+			-ms-flex-align:center;
+			align-items:center;
+			text-align: -moz-center;
+
+			}
+
+
+
+			.service-inner{
+			position:sticky;
+			left: 0;
+			right: 0;
+			z-index: 10;
+			text-align: -webkit-center;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: all 1s ease-out;
+			}
+
+
+
+
+			/* END SERVICES */
+			/*===============================================================================================================*/
+
+			.slogan{
+			top: 14%;
+			transform: translateY(-14%);
+			position: fixed;
+			text-align: -webkit-center;
+			right: 0;
+			left: 0;
+			z-index:9999;
+			}
+
+
+			h1{
+			color: #FFBE92;
+			font-size: 1.1rem;
+			font-family: 'Gotham';
+			letter-spacing: 2px;
+			padding-bottom:8px;
+
+			}
+
+
+
+			h1::after{
+			content: "";
+			background: #FFBE92;
+			padding-right: 1px;
+			padding-top: 45px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top:40px;
+			width: 1px;
+			margin: auto;
+			}
+
+			/*NAVBAR*/
+
+
+			nav{
+			width:100%;
+			height:100%;
+			position:absolute;
+			}
+
+
+			nav  a{
+			font-size:0.8rem;
+			letter-spacing:2px;
+			color:#b7b7b7!important;
+			font-family:'Gotham';
+			font-weight: 500;
+			font-style: normal;
+			position:fixed;
+			z-index:1;
+			}
+
+
+
+			nav  a:hover{
+			color:#FFFFFF;
+			text-decoration:none;
+			}
+
+
+
+			.careers{
+			top: 60px;
+			left: 60px;
+			transform-origin: right top;
+			transform: translateX(-100%) rotate(-90deg);
+			}
+
+			.find-us{
+			bottom:60px;
+			right: 60px;
+			transform-origin: right bottom;
+			transform: translateY(-100%) rotate(90deg) translateY(100%);
+			}
+
+			.services{
+			bottom:60px;
+			left: 60px;
+			transform-origin: left bottom;
+			transform: translateY(-100%) rotate(-90deg) translateY(100%);
+			}
+
+			.services::after{
+			content: ' ';
+			display: inline-block;
+			width: 52px;
+			height: 1px;
+			background-color:#b7b7b7!important;
+			line-height: 1px;
+			vertical-align: middle;
+			margin-left: 6px;
+			margin-bottom: 3px;
+			}
+
+			a.services::before{
+			content: ' ';
+			display: inline-block;
+			width: 90px;
+			height: 1px;
+			background-color: #b7b7b7!important;
+			line-height: 1px;
+			vertical-align: middle;
+			margin-left: 6px;
+			margin-bottom: 3px;
+			position: absolute;
+			bottom:6px;
+			}
+
+
+			.about{
+			top:60px;
+			right:60px;
+			transform-origin:left top;
+			transform: translateX(100%) rotate(90deg);
+			}
+
+
+
+
+
+
+
+		</style>
+  </head>
+  <body  itemscope itemtype ="http://schema.org/LocalBusiness">
+<div class="cursor"></div>
+<div class="cursor"></div>
+
+
+			<div class="container-outer">
+				<div class="container-inner" id="fullpage">
+
+
+
+					<nav>
+
+						<a class="careers">CAREERS</a>
+						<a class="services">SERVICES</a>
+
+						<a class="about">ABOUT</a>
+						<a class="find-us">FIND US</a>
+
+					</nav>
+			
+
+					<div class="slogan">
+						<h1>SERVICES</h1>
+					</div>
+
+
+
+					
+					
+					<div id="one" class="outer section">
+
+
+						<div class="service-inner first">
+							<p class="service-title-first"></p>
+							<p class="service-para-first">
+							Lorem Ipsum Sit Dolor Amet Lorem Ipsum Sit Dolor Amet   Lorem Ipsum Sit Dolor Amet Lorem Ipsum Sit Dolor
+							</p>
+							</div>
+						
+					</div>
+					
+					
+					<div id="two" class="outer section">
+
+						<div class="service-inner second">
+							<p class="service-title-second"></p>
+							<p class="service-para-second">Lorem Ipsum Sit Dolor Amet Lorem Ipsum Sit Dolor Amet   Lorem Ipsum Sit Dolor Amet Lorem Ipsum Sit Dolor</p>
+						</div>					
+					</div>
+					
+					
+					<div id="three" class="outer section">
+
+						<div class="service-inner third">
+							<p class="service-title-third"></p>
+							<p class="service-para-third">Lorem Ipsum Sit Dolor Amet Lorem Ipsum Sit Dolor Amet   Lorem Ipsum Sit Dolor Amet Lorem Ipsum Sit Dolor</p>
+						</div>
+ 					
+					</div>
+					
+					
+					<div id="four" class="outer section">
+
+						<div class="service-inner fourth">
+							<p class="service-title-fourth "></p>
+							<p class="service-para-fourth ">Lorem Ipsum Sit Dolor Amet Lorem Ipsum Sit Dolor Amet   Lorem Ipsum Sit Dolor Amet Lorem Ipsum Sit Dolor</p>
+						</div>					
+					</div>
+					
+					
+				</div>
+			</div>
+
+
+
+
+		<script>
+			(function(container){
+			$.fn.stopAtTop= function (serv) {
+			var $this = this,
+			$container = $(".container-inner"),
+			thisPos = $this.offset().top,
+			//thisPreservedTop = $this.css("top"),
+			setPosition,
+			under,
+			over;
+
+		
+
+			under = function(){
+			if ($(".container-inner").scrollTop() < thisPos) {
+       
+
+				
+						TweenMax.to($this, 0, {"position":"absolute","top":""});
+					
+									
+				
+				
+				
+            setPosition = over;
+        }
+    };
+    
+    over = function(){
+        if (!($(".container-inner").scrollTop() < thisPos) ){
+
+					TweenMax.to(serv.prev(".service-inner").find('.service-inner'));					
+					
+					TweenMax.to($this, 0, {"position":"sticky","top":"0px", "transition": "opacity 2s"});
+
+					TweenMax.to(serv, 1, {"opacity":"1"});
+
+
+					setPosition = under;
+					}
+					};
+
+					setPosition = over;
+
+					$container.resize(function()
+					{
+					bumperPos = pos.offset().top;
+					thisHeight = $this.outerHeight();
+					setPosition();
+					});
+
+					$container.scroll(function(){setPosition();});
+					setPosition();
+					};
+					})($(".container-inner"));
+
+					$('#one').stopAtTop($("#one > .service-inner"));
+					$('#two').stopAtTop($("#two > .service-inner"));
+					$('#three').stopAtTop($("#three > .service-inner"));
+					$('#four').stopAtTop($("#four > .service-inner"));
+
+
+
+				</script>
+
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"/>
+
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

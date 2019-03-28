@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>zoom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    ul li{
+        padding: 10px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel title</h3>
+                    <span class="pull-right">
+                        <!-- Tabs -->
+                        <ul class="nav panel-tabs">
+                            <li class="active"><a href="#tab1" data-toggle="tab">Tab 1</a></li>
+                            <li><a href="#tab2" data-toggle="tab">Tab 2</a></li>
+                            <li><a href="#tab3" data-toggle="tab">Tab 3</a></li>
+                            <li><a href="#tab4" data-toggle="tab">Tab 4</a></li>
+                        </ul>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <br />
+                    <br />
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1">
+                            <div class="container">
+                                    <div class="slide">
+                                        <img class='zoom' src='bg-c.png' alt='Daisy!' width='555' height='320'/>
+										
+										 <img class='zoom' src='bg-c.png' alt='xy' width='555' height='320'/>
+                                    </div>
+                                </div>
+                                <br />
+                                <!-- <input type="button" value="click me"> -->
+                        </div>
+                        <div class="tab-pane" id="tab2">
+                            <div class="container">
+                                    <div class="slide">
+                                       <img class='zoom' src='ser-bg.png' alt='abc' width='555' height='320'/>
+									   
+									    <img class='zoom' src='bg-c.png' alt='xy' width='555' height='320'/>
+                                    </div>
+                                </div>
+                                <br />
+                                <!-- <input type="button" value="click me"> -->
+                        </div>
+                         <div class="tab-pane" id="tab3">
+                            <div class="container">
+                                    <div class="slide">
+                                       <img class='zoom' src='bg-c.png' alt='xy' width='555' height='320'/>
+                                    </div>
+                                </div>
+                                <br />
+                                <!-- <input type="button" value="click me"> -->
+                        </div>
+                         <div class="tab-pane" id="tab4">
+                            <div class="container">
+                                    <div class="slide">
+                                       <img class='zoom' src='rec.png' alt='rec' width='555' height='320'/>
+                                    </div>
+                                </div>
+                                <br />
+                                <!-- <input type="button" value="click me"> -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- <img class='zoom' src='daisy.jpg' alt='Daisy!' width='555' height='320'/>
+    <br />
+    <img class='zoom' src='daisy.jpg' alt='Daisy!' width='555' height='320'/> -->
+    <script src="wheelzoom.js"></script>
+    <script>
+        wheelzoom(document.querySelectorAll('img.zoom'));
+    </script>
+</body>
+</html>
